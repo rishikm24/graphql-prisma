@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "prisma db push && redis server",
+    "heroku-prebuild": "prisma db push",
+    "heroku-postbuild": "redis server"
     "start": "node src/index.js",
     "dev": "node src/index.js --ext js,graphql --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
