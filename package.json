@@ -1,0 +1,30 @@
+{
+  "name": "my-prisma-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "env-cmd .env node src/index.js",
+    "dev": "env-cmd .env node src/index.js --ext js,graphql --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prisma": "^2.26.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.26.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "bcryptjs": "^2.4.3",
+    "env-cmd": "^10.1.0",
+    "graphql-redis-subscriptions": "^2.4.0",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21"
+  }
+}
