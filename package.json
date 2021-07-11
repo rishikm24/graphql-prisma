@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "heroku-prebuild": "prisma db push",
-    "start": "env-cmd ./.env node src/index.js",
-    "dev": "env-cmd ./.env node src/index.js --ext js,graphql --exec babel-node",
+    "start": "node src/index.js",
+    "dev": "node src/index.js --ext js,graphql --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,7 +22,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "bcryptjs": "^2.4.3",
-    "env-cmd": "^10.1.0",
+    "dotenv": "^10.0.0",
     "graphql-redis-subscriptions": "^2.4.0",
     "graphql-yoga": "^1.18.3",
     "jsonwebtoken": "^8.5.1",
