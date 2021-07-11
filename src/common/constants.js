@@ -3,5 +3,3 @@ exports.MUTATION_TYPE = {
     UPDATED: 'UPDATED',
     DELETED: 'DELETED'
 }
-
-exports.temp = 'temp'
