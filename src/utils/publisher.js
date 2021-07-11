@@ -1,11 +1,9 @@
-const { RedisPubSub } = require('graphql-redis-subscriptions')
-const pubSub = new RedisPubSub()
-
+const { pubsub } = require('../common/redis')
 exports.publishMessage = (triggerName, mutation, type, data) => {
     let publishObj = {}
     publishObj[type] = {
         mutation,
         data
     }
-    pubSub.publish(triggerName, publishObj)
+    pubsub.publish(triggerName, publishObj)
 }
