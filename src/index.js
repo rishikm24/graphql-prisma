@@ -1,6 +1,5 @@
 const { GraphQLServer } = require('graphql-yoga')
 const dotenv = require('dotenv')
-const { RedisPubSub } = require('graphql-redis-subscriptions')
 const db = require('./db')
 const Query = require('./resolvers/Query')
 const Mutation = require('./resolvers/Mutation')
@@ -8,7 +7,7 @@ const { Subscription } = require('./resolvers/Subscription')
 const User = require('./resolvers/User')
 const Post = require('./resolvers/Post')
 const Comment = require('./resolvers/Comment')
-const pubsub = new RedisPubSub()
+const { pubsub } = require('./common/redis')
 
 dotenv.config({
     path: './.env'
