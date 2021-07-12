@@ -1,6 +1,4 @@
-// const { pubsub } = require('../common/redis')
-const { PubSub } = require('graphql-yoga')
-const pubsub = new PubSub()
+const { pubsub } = require('../common/redis')
 exports.publishMessage = (triggerName, mutation, type, data) => {
     let publishObj = {}
     publishObj[type] = {
